@@ -1,0 +1,26 @@
+{
+    "name": "goody-tech/laravel-sync-batch",
+    "description": "laravel-sync-batch",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "GoodyTech\\SyncBatch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yamaguchi.dai"
+        }
+    ],
+    "require": {
+        "laravel/framework": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GoodyTech\\SyncBatch\\Provider\\AppProvider"
+            ]
+        }
+    }
+}
