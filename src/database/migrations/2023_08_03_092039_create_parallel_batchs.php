@@ -13,7 +13,7 @@ class CreateParallelBatchs extends Migration
     {
         Schema::getConnection()->statement('CREATE SEQUENCE parallel_batch_seq');
         Schema::create('parallel_batches', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->bigInteger('master_id');
             $table->timestamps();
         });
