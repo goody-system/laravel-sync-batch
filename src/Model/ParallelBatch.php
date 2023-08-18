@@ -90,7 +90,7 @@ class ParallelBatch extends Model {
      * @return void
      */
     public static function endChildProcess(Command $child_cmd): void {
-        if ($child_cmd->hasOption('process_id')) {
+        if (!is_null($child_cmd->option('process_id'))) {
             $process_id = $child_cmd->option('process_id');
             self::find($process_id)->delete();
         }
